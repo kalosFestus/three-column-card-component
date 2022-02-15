@@ -1,0 +1,121 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Lexend Deca";
+}
+
+h2 {
+    font-family: "Big Shoulders Display";
+    font-weight: 700;
+    color: hsl(0, 0%, 95%);
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+    font-family: 400;
+    line-height: 1.8;
+}
+
+button {
+    padding: 5% 10%;
+    margin-top: 25%;
+    border-style: none;
+    background-color: hsl(0, 0%, 95%);
+    color: hsl(31, 77%, 52%);
+    border-radius: 45px 45px;
+    font-family: "Lexend Deca";
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-one,
+.container-two,
+.container-three {
+    background-color: hsl(31, 77%, 52%);
+    flex-basis: 23%;
+    height: 70%;
+    padding-left: 5%;
+    padding-top: 4%;
+}
+
+.container-one h2,
+.container-two h2,
+.container-three h2 {
+    padding-top: 10%;
+    padding-bottom: 7%;
+}
+
+.container-two {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.container-two>button {
+    color: hsl(184, 100%, 22%);
+}
+
+.container-three {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.container-three>button {
+    color: hsl(179, 100%, 13%);
+}
+
+/* Active states */
+.container-one>button:hover,
+.container-two>button:hover,
+.container-three>button:hover {
+    background-color: transparent;
+    text-decoration: none;
+    color: hsl(0, 0%, 95%);
+    border: 2px solid;
+}
+
+/*Mobile @375px width*/
+@media (max-width: 375px) {
+    .flex-container {
+        flex-direction: column;
+        height: auto;
+        align-items: normal;
+        margin: 5%;
+    }
+
+    .container-one {
+        margin-top: 10%;
+        border-top-left-radius: 3%;
+        border-top-right-radius: 3%;
+    }
+
+    .container-three {
+        border-bottom-left-radius: 3%;
+        border-bottom-right-radius: 3%;
+        margin-bottom: 10%;
+    }
+
+    .container-one,
+    .container-two,
+    .container-three {
+        padding-left: 20%;
+    }
+
+    button {
+        margin-bottom: 20%;
+    }
+
+}
